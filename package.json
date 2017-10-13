@@ -1,8 +1,16 @@
 {
   "name": "webstore",
   "version": "1.0.0",
-  "description": "Create a page with sass, css",
-  "main": "index.js",
+  "description": "",
+  "main": "gruntFile.js",
+  "dependencies": {
+    "grunt-contrib-concat": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "gulp-sass": "^3.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/Any28Flo/webStore.git"
   },
-  "author": "Any Flores",
+  "author": "any flores",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Any28Flo/webStore/issues"
   },
-  "homepage": "https://github.com/Any28Flo/webStore#readme",
-  "devDependencies": {
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0"
-  }
+  "homepage": "https://github.com/Any28Flo/webStore#readme"
 }
