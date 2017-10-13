@@ -1,11 +1,50 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$font-stack: 'Roboto', sans-serif;
+$primary-color:  #783393;
+$color-white: #FFFFFF;
+$zero : 0;
+$alignCenter : center;
+$twenty: 20px;
+$therty: 30px;
+$conteinerWith: 800px;
+$imgFull: 100%;
+html{
+  box-sizing: border-box;
+ }
+
+ *,*::before , *::after{
+   box-sizing: inherit;
+ }
+ *{
+   margin: $zero;
+   padding: $zero;
+ }
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
+  background-color:  $primary-color;
+}
+header{
+  text-align: $alignCenter;
+  padding: $twenty $zero;
 }
 
-li{
-  
+div.contenedor{
+  margin: $zero auto;
+  width: $conteinerWith;
+}
+div.hero{
+  img{
+    width: $imgFull;
+  }
+}
+h2{
+  text-align: $alignCenter;
+  color:$color-white;
+  text-transform: uppercase;
+  margin:$therty $zero;
+}
+ul.listaProductos{
+  list-style: none;
+  margin: $zero;
+  padding: $zero;
 }

@@ -1,4 +1,4 @@
 /node_modules
 package-lock.json
-*.sass-cache
-build/css/main.css.map
+build/css/main*.css.map
+.sass-cache/
