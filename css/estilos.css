@@ -10,6 +10,7 @@ html{
 }
 body{
   font-family: 'Roboto', sans-serif;
+  background-color: #783393;  
 }
 header{
   text-align: center;
@@ -18,5 +19,6 @@ header{
 /*clases*/
 .contenedor{
   margin: 0 auto;
-    width: 800px;
+  width: 800px;
+
 }
