@@ -1,10 +1,15 @@
 $font-stack: 'Roboto', sans-serif;
 $primary-color:  #783393;
 $color-white: #FFFFFF;
+$color-pink: #ef4581;
+$color-orange : #ffce00;
 $zero : 0;
+$eigtheen:18px;
 $alignCenter : center;
+$ten:10px;
 $twenty: 20px;
 $therty: 30px;
+$fourty: 40px;
 $conteinerWith: 800px;
 $imgFull: 100%;
 html{
@@ -47,4 +52,43 @@ ul.listaProductos{
   list-style: none;
   margin: $zero;
   padding: $zero;
+  li{
+    float: left;
+    width: 50%;
+    padding: $twenty;
+    text-align: $alignCenter;
+    p{
+      color: $color-white;
+      font-size: $twenty + 8px;
+      margin-top: $twenty;
+      span{
+        font-size: $fourty;
+        color: $color-orange;
+        margin-right:  $ten;
+      }
+    }
+  }
+  li:nth-child(2n+1){
+    clear: both;
+  }
+  li img{
+    border: $twenty/2 solid #ef4581;
+    &:hover{
+      border: $twenty/2 solid #f1f1f2;
+    }
+  }
+  // li p{
+  //   color: $color-white;
+  // }
+}
+.boton{
+  background-color: $color-orange;
+  padding: $ten $fourty;
+  display: inline-block;
+  margin-top: $ten;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:$primary-color;
+  font-size: $eigtheen;
 }
