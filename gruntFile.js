@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const sass= require('gulp-sass');
-gulp.registerTask('sass', ()=>{
-  return gulp.src('sass/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('build'))
-})
+// const gulp = require('gulp');
+// const sass= require('gulp-sass');
+// gulp.registerTask('sass', ()=>{
+//   return gulp.src('sass/*.scss')
+//     .pipe(sass())
+//     .pipe(gulp.dest('build'))
+// })
 module.exports = (grunt)=>{
 // grunt.registerTask('speak',function(){
 //   console.log("Hello from grunt");
@@ -18,13 +18,24 @@ grunt.initConfig({
       dest: 'build/js/app.min.js'
     },
   },
+  sass: {                              // Task
+    dist: {                            // Target
+      options: {                       // Target options
+        style: 'expanded'
+      },
+      files: {                         // Dictionary of files
+        'build/css/main.css' : 'scss/app.scss',       // 'destination': 'source'
+      }
+    }
+  },
   watch: {
   scripts: {
-    files: ['js/*.js'],
-    tasks: ['concat']
+    files: ['js/*.js','scss/*.scss'],
+    tasks: ['concat','sass']
 
   },
-},
+
+}
   // uglify: {
   //   my_target: {
   //     files: {
@@ -33,8 +44,10 @@ grunt.initConfig({
   //   }
   // }
 });
+grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');
-gulp.task('default',['sass']);
+
+grunt.registerTask('default', ['sass']);
+
 };
